@@ -43,7 +43,7 @@ class MongoDB extends \MongoDB\Client{
      * init connect
      * @throws Exception
      */
-    protected function _init_manager(){
+    protected function _initManager(){
         if ($this->_is_config)return ;
         $config=$this->_config;
         $uri=$config->get("uri");
@@ -62,7 +62,7 @@ class MongoDB extends \MongoDB\Client{
     */
     public function __debugInfo()
     {
-        $this->_init_manager();
+        $this->_initManager();
         return parent::__debugInfo();
     }
     
@@ -72,7 +72,7 @@ class MongoDB extends \MongoDB\Client{
     */
     public function __get($databaseName)
     {
-        $this->_init_manager();
+        $this->_initManager();
         return parent::__get($databaseName);
     }
     
@@ -91,7 +91,7 @@ class MongoDB extends \MongoDB\Client{
     */
     public function dropDatabase($databaseName, array $options = [])
     {
-        $this->_init_manager();
+        $this->_initManager();
         return parent::dropDatabase($databaseName,  $options );
     }
     
@@ -101,7 +101,7 @@ class MongoDB extends \MongoDB\Client{
     */
     public function getManager()
     {
-        $this->_init_manager();
+        $this->_initManager();
         return parent::getManager( );
     }
     
@@ -111,7 +111,7 @@ class MongoDB extends \MongoDB\Client{
      */
     public function getReadConcern()
     {
-        $this->_init_manager();
+        $this->_initManager();
         return parent::getReadConcern( );
     }
     /**
@@ -120,7 +120,7 @@ class MongoDB extends \MongoDB\Client{
      */
     public function getReadPreference()
     {
-        $this->_init_manager();
+        $this->_initManager();
         return parent::getReadPreference( );
     }
    /**
@@ -129,7 +129,7 @@ class MongoDB extends \MongoDB\Client{
     */
     public function getTypeMap()
     {
-        $this->_init_manager();
+        $this->_initManager();
         return parent::getTypeMap( );
     }
    /**
@@ -138,7 +138,7 @@ class MongoDB extends \MongoDB\Client{
     */
     public function getWriteConcern()
     {
-        $this->_init_manager();
+        $this->_initManager();
         return parent::getWriteConcern( );
     }
     /**
@@ -147,7 +147,7 @@ class MongoDB extends \MongoDB\Client{
      */
     public function listDatabases(array $options = [])
     {
-        $this->_init_manager();
+        $this->_initManager();
         return parent::listDatabases( $options );
     }
     /**
@@ -156,7 +156,7 @@ class MongoDB extends \MongoDB\Client{
      */
     public function selectCollection($databaseName, $collectionName, array $options = [])
     {
-        $this->_init_manager();
+        $this->_initManager();
         return parent:: selectCollection($databaseName, $collectionName, $options );
     }
     /**
@@ -165,7 +165,7 @@ class MongoDB extends \MongoDB\Client{
      */
     public function selectDatabase($databaseName, array $options = [])
     {
-        $this->_init_manager();
+        $this->_initManager();
         return parent::selectDatabase($databaseName,$options);
     }
    /**
@@ -174,7 +174,7 @@ class MongoDB extends \MongoDB\Client{
     */
     public function startSession(array $options = [])
     {
-        $this->_init_manager();
+        $this->_initManager();
         return parent::startSession($options);
     }
     /**
